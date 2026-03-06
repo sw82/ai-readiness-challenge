@@ -1,94 +1,83 @@
 # AI Readiness Challenge
 
-> **CAL AI Challenge — Session 2**
+> A hackathon brief by CAL
 
 ---
 
 ## The Problem
 
-Many organizations have no idea where to start with AI.
+Most organizations have no idea how AI-ready they really are.
 
-They don't know what they're good at, where the gaps are, or what to tackle first. Traditional consulting firms charge €50,000–€200,000 for this kind of strategic assessment. The result is usually a PowerPoint deck that collects dust.
+They don't know what capabilities they have, where the gaps are, or where to start. Big consulting firms — McKinsey, BCG, Deloitte — charge tens of thousands of euros to answer this question. The result is usually a slide deck.
 
-**CAL wants to change that. We built a free, automated AI readiness assessment — and it works.**
+**What if you could automate this?**
 
-The tool is live at **[gutinvestiert.de](https://gutinvestiert.de)** — go take the quick check. It takes 2 minutes.
+---
+
+## The Inspiration
+
+Take 2 minutes and try this: **[gutinvestiert.de](https://gutinvestiert.de)**
+
+It's a free, automated AI readiness assessment for organizations. Reflect on what it does, what it asks, and what it tells you. That's it. You don't need to understand how it works under the hood.
 
 ---
 
 ## Your Challenge
 
-> **Make an LLM behave the way this tool does.**
+**Build your own AI-powered organizational readiness assessment.**
 
-The tool you just used is backed by a framework — a set of dimensions, weights, scoring logic, and recommendations derived from research. That framework lives in this repo.
+Not a copy. Yours. From scratch.
 
-Your job: get an LLM to replicate the consultancy intelligence behind it.
+You decide:
+- What does "AI readiness" even mean?
+- What should you measure, and why?
+- How do you turn answers into insight?
+- How does an LLM fit into this?
 
-You define what "replicate" means. Some directions to explore:
-
-- Can you make an LLM *conduct* the assessment conversationally?
-- Can you make it *interpret* a set of answers and produce a tier + recommendations?
-- Can you make it *reason* about an organization's AI readiness based on a free-text description alone?
-- Can you get it to produce output that is *indistinguishable* from what an expert consultant would write?
-
-There is no single right answer. There is no skeleton code to fill in. This is open-ended by design.
+The research below gives you a starting point. Use it, expand it, ignore parts of it — but be able to defend your choices.
 
 ---
 
-## What's in This Repo
+## Starting Research
 
-```
-research/
-├── framework.md       ← The assessment dimensions and scoring logic
-├── tiers.md           ← The five maturity levels (Einsteiger → Vorreiter)
-├── recommendations.md ← What good recommendations look like
-└── references.md      ← Scientific sources behind the framework
-```
+These sources are your raw material. Some are free, some require a library login.
 
-Start there. Understand the framework. Then figure out how to encode it.
+| Source | Why It's Relevant |
+|---|---|
+| [Gartner AI Maturity Model (2023)](https://www.gartner.com/en/articles/the-5-levels-of-ai-maturity) | How organizations mature in AI adoption |
+| [McKinsey — State of AI 2024](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai) | What separates leaders from laggards |
+| [MIT Sloan — Leading in the Age of AI](https://sloanreview.mit.edu/projects/leading-in-the-age-of-ai/) | Leadership and strategic dimensions |
+| [HBR — The Massive Readiness Gap for Agentic AI](https://hbr.org/resources/pdfs/comm/boomi/TheMassiveReadinessGap.pdf) | Where organizations get stuck |
+| [EU AI Act (2024)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689) | The regulatory reality every European org faces |
+| [DigComp 2.2](https://publications.jrc.ec.europa.eu/repository/handle/JRC128415) | Digital competence as a foundation for AI |
+| [WEF — Future of Jobs 2025](https://www.weforum.org/publications/the-future-of-jobs-report-2025/) | Workforce transformation pressure |
+| [Stanford HAI — AI Index 2024](https://aiindex.stanford.edu/report/) | Global benchmarks and enterprise data |
+| [Fraunhofer IAO — KI im Mittelstand](https://www.iao.fraunhofer.de) | SME-specific context (German) |
+| [OECD AI Principles](https://oecd.ai/en/ai-principles) | Ethics and governance baseline |
 
 ---
 
-## Hints (read only if stuck)
+## What to Build
 
-<details>
-<summary>Hint 1 — Where to start</summary>
+Minimum: a working prototype that takes input from a user and produces a meaningful assessment of their organization's AI readiness.
 
-An LLM doesn't know your framework by default. You have to tell it. The question is: how?
+Beyond that — it's up to you. Some questions to drive your thinking:
 
-</details>
-
-<details>
-<summary>Hint 2 — What "getting the knowledge in" means</summary>
-
-There are at least three fundamentally different approaches to making an LLM behave like a domain expert:
-1. Tell it everything in the prompt
-2. Give it structured data and let it reason
-3. Show it examples and let it generalize
-
-Which one works best here? Why?
-
-</details>
-
-<details>
-<summary>Hint 3 — Evaluation</summary>
-
-How do you know if your LLM is actually good at this? Design a way to evaluate it. What would a ground truth look like?
-
-</details>
+- What do you actually need to know about an organization to assess it?
+- How do you handle the difference between what leadership *thinks* and what employees *experience*?
+- What makes a recommendation useful vs. generic?
+- How do you know if your LLM is giving good advice?
 
 ---
 
 ## Deliverable
 
-At the end of the session, show us:
+At the end of the session, present:
 
-1. What you built (a prompt, a chain, an app — anything)
-2. One example input → output that demonstrates it works
-3. One thing that surprised you or didn't work
-
-**Time:** 90 minutes.
+1. **What you built** — demo it
+2. **Why you designed it this way** — defend your choices
+3. **What you would do differently** with more time
 
 ---
 
-*Built with ❤️ by CAL. Framework based on 15+ scientific sources — see `research/references.md`.*
+*Time: 90–120 minutes. Teams of 2–4.*
